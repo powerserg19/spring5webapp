@@ -1,11 +1,17 @@
 package guru.springframework.spring5webapp.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+
 public class Address {
 
-    private String address_line;
-    private String city;
-    private String state;
-    private String zip;
+    protected String address_line;
+    protected String city;
+    protected String state;
+    protected String zip;
 
     public Address() {
     }
@@ -57,5 +63,29 @@ public class Address {
                 ", state='" + state + '\'' +
                 ", zip='" + zip + '\'' +
                 '}';
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getZip() {
+        return zip;
+    }
+
+    public void setZip(String zip) {
+        this.zip = zip;
     }
 }

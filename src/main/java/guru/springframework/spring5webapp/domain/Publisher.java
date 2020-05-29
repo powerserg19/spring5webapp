@@ -52,6 +52,42 @@ public class Publisher extends Address{
         this.books = books;
     }
 
+    @Access(AccessType.PROPERTY)
+    @Column(name = "city")
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+    @Access(AccessType.PROPERTY)
+    @Column(name = "state")
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+    @Access(AccessType.PROPERTY)
+    @Column(name = "zip")
+    public String getZip() {
+        return zip;
+    }
+
+    public void setZip(String zip) {
+        this.zip = zip;
+    }
+    @Access(AccessType.PROPERTY)
+    @Column(name = "street_address")
+    public String getAddress_line() {
+        return address_line;
+    }
+
+    public void setAddress_line(String address_line) {
+        this.address_line = address_line;
+    }
 
     @Override
     public String toString() {
