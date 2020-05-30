@@ -1,4 +1,4 @@
-package guru.springframework.spring5webapp.controller;
+package guru.springframework.spring5webapp.controllers;
 
 import guru.springframework.spring5webapp.repositories.BookRepository;
 import org.springframework.stereotype.Controller;
@@ -14,9 +14,10 @@ public class BookController {
     }
 
     @RequestMapping("/books")
-    public getBooks(Model model){
+    public String getBooks(Model model){
+
+        model.addAttribute("books", bookRepository.findAll());
+
         return "books";
     }
-
-
 }
